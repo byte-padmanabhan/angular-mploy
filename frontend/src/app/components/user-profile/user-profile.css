@@ -1,0 +1,16 @@
+.profile-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

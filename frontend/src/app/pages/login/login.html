@@ -1,0 +1,68 @@
+<div class="page">
+  <div class="left-panel">
+    <div class="brand">
+      <h1>MPloyChek</h1>
+      <p>Smart Verification Platform for Modern Hiring.</p>
+    </div>
+
+    <div class="floating-card card-1">
+      <span>⚡ Fast Verification</span>
+    </div>
+
+    <div class="floating-card card-2">
+      <span>🔐 Secure Access</span>
+    </div>
+
+    <div class="floating-card card-3">
+      <span>🚀 Async Processing</span>
+    </div>
+
+    <div class="quote-box">
+      <p>“Deploying confidence, one API call at a time.”</p>
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <div class="login-card">
+      <div class="top-badge">
+        <span>✨ Internship Challenge Edition</span>
+      </div>
+
+      <h2>Welcome Back</h2>
+
+      <p class="subtitle">Please sign in to continue to the dashboard.</p>
+
+      <form (ngSubmit)="onLogin()">
+        <div class="input-group">
+          <label>User ID</label>
+
+          <input type="text" placeholder="Enter User ID" [(ngModel)]="userId" name="userId" />
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Enter password"
+            [(ngModel)]="password"
+            name="password"
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Role</label>
+
+          <select [(ngModel)]="role" name="role">
+            <option>General User</option>
+            <option>Admin</option>
+          </select>
+        </div>
+
+        <button type="submit">🚀 Access Dashboard</button>
+      </form>
+
+      <div class="footer-text">
+        <p>Built with Angular + caffeine + questionable sleep schedule ☕</p>
+      </div>
+    </div>
+  </div>
+</div>

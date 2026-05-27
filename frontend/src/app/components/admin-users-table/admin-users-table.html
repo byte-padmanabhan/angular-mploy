@@ -1,0 +1,51 @@
+<div class="admin-card">
+  <h2>Admin User Management 👑</h2>
+
+  <div *ngIf="isLoading">Loading users...</div>
+
+  <div class="create-user-form">
+    <input type="text" placeholder="User ID" [(ngModel)]="newUser.userId" />
+
+    <input type="text" placeholder="Name" [(ngModel)]="newUser.name" />
+
+    <input type="email" placeholder="Email" [(ngModel)]="newUser.email" />
+
+    <input type="password" placeholder="Password" [(ngModel)]="newUser.password" />
+
+    <select [(ngModel)]="newUser.role">
+      <option>General User</option>
+
+      <option>Admin</option>
+    </select>
+
+    <button (click)="createUser()">Create User</button>
+  </div>
+
+  <table *ngIf="!isLoading">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>User ID</th>
+        <th>Role</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+
+        <td>{{ user.name }}</td>
+
+        <td>{{ user.userId }}</td>
+
+        <td>{{ user.role }}</td>
+
+        <td>
+          <button (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  background: #0f172a;
+  color: white;
+}
+
+.left-panel {
+  width: 50%;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, #312e81, transparent 40%),
+    radial-gradient(circle at bottom right, #0ea5e9, transparent 35%), #0f172a;
+}
+
+.brand h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.brand p {
+  width: 400px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  font-size: 18px;
+}
+
+.floating-card {
+  position: absolute;
+  padding: 18px 22px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: float 4s ease-in-out infinite;
+}
+
+.card-1 {
+  top: 180px;
+  left: 60px;
+}
+
+.card-2 {
+  top: 320px;
+  left: 200px;
+  animation-delay: 1s;
+}
+
+.card-3 {
+  top: 470px;
+  left: 100px;
+  animation-delay: 2s;
+}
+
+.quote-box {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  width: 320px;
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.right-panel {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #111827;
+}
+
+.login-card {
+  width: 420px;
+  padding: 40px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.top-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 50px;
+  margin-bottom: 22px;
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  font-size: 13px;
+}
+
+.login-card h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #9ca3af;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+input,
+select {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  outline: none;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+select option {
+  background: #111827;
+}
+
+input:focus,
+select:focus {
+  border-color: #8b5cf6;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+button {
+  margin-top: 10px;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 15px 30px rgba(124, 58, 237, 0.35);
+}
+
+.footer-text {
+  margin-top: 25px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .left-panel {
+    display: none;
+  }
+
+  .right-panel {
+    width: 100%;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 420px;
+  }
+}

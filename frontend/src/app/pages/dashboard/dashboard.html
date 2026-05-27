@@ -1,0 +1,14 @@
+<div class="dashboard-page">
+  <div class="navbar">
+    <h1>MPloyChek Dashboard 🚀</h1>
+
+    <button>Logout</button>
+  </div>
+
+  <div class="dashboard-content">
+    <app-user-profile [profile]="profile"> </app-user-profile>
+
+    <app-records-table [records]="records" [isLoading]="isLoading"> </app-records-table>
+    <app-admin-users-table *ngIf="profile?.role === 'Admin'"> </app-admin-users-table>
+  </div>
+</div>
